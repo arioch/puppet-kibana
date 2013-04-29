@@ -1,0 +1,20 @@
+<VirtualHost *:80>
+    RackAutoDetect On
+    PassengerRuby /usr/bin/ruby
+    RailsEnv 'production'
+
+    DocumentRoot /usr/share/kibana/static
+    ServerName   <%= server_name %>
+
+    ErrorLog  <%= log_dir %>/kibana_error.log
+    CustomLog <%= log_dir %>/kibana_access.log combined
+    LogLevel warn
+
+    <Directory /usr/share/kibana/static>
+        Options None
+        AllowOverride None
+        Order allow,deny
+        allow from all
+        Options -MultiViews
+    </Directory>
+</VirtualHost>
