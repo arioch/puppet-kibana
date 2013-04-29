@@ -1,0 +1,1 @@
+{"name":"Puppet-kibana","tagline":"","body":"# Puppet Kibana\r\n\r\n## Example usage\r\n\r\n### Install Kibana\r\n\r\n    node /box/ {\r\n      include kibana\r\n    }\r\n\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
