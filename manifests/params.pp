@@ -9,9 +9,9 @@ class kibana::params {
     }
 
     'Debian': {
-      $pkg_deps   = undef
-      $pkg_ensure = present
-      $pkg_list   = 'kibana'
+      $pkg_deps     = [ 'libtzinfo-ruby', 'libsinatra-ruby' ]
+      $pkg_ensure   = present
+      $pkg_list     = 'kibana'
     }
 
     default: {
