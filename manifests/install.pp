@@ -11,5 +11,12 @@ class kibana::install {
       before => Package[$::kibana::pkg_list],
     }
   }
+
+  if $::kibana::pkg_deps_gem {
+    package { $::kibana::pkg_deps_gem:
+      ensure => $::kibana::pkg_ensure,
+      before => Package[$::kibana::pkg_list],
+    }
+  }
 }
 
