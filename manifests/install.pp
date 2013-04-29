@@ -14,8 +14,9 @@ class kibana::install {
 
   if $::kibana::pkg_deps_gem {
     package { $::kibana::pkg_deps_gem:
-      ensure => $::kibana::pkg_ensure,
-      before => Package[$::kibana::pkg_list],
+      ensure   => $::kibana::pkg_ensure,
+      before   => Package[$::kibana::pkg_list],
+      provider => 'gem',
     }
   }
 }
