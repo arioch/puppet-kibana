@@ -1,4 +1,4 @@
-# = Class kibana::install
+# == Class kibana::install
 #
 class kibana::install {
   package { $::kibana::pkg_list:

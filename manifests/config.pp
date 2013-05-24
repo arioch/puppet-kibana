@@ -1,4 +1,4 @@
-# = Class kibana::config
+# == Class kibana::config
 #
 class kibana::config {
   file { '/usr/share/kibana/apache2.conf':

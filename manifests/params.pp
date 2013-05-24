@@ -1,4 +1,4 @@
-# = Class: kibana::params
+# == Class: kibana::params
 #
 class kibana::params {
   $server_name = "kibana.${::fqdn}"

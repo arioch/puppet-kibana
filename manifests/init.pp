@@ -1,4 +1,4 @@
-# = Class: kibana
+# == Class: kibana
 #
 class kibana (
   $log_dir     = $::kibana::params::log_dir,
